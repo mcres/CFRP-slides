@@ -1,52 +1,479 @@
 <!doctype html>
-<html>
-	<head>
+<html lang="en">
 
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="chrome=1">
-		<title>reveal.js - The HTML Presentations Framework</title>
+<head>
+    <meta charset="utf-8">
 
-		<link rel="stylesheet" href="css/normalize.css">
-		<link rel="stylesheet" href="css/main.css">
+    <title>reveal.js - The HTML Presentation Framework</title>
 
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
 
-		<!--[if lt IE 9]>
-		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/solarized.css" id="theme">
+    <link rel="stylesheet" href="css/xabi.css" id="theme">
+
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+        if (window.location.search.match(/print-pdf/gi)) {
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = 'css/print/pdf.css';
+            document.getElementsByTagName('head')[0].appendChild(link);
+        }
+    </script>
+
+    <!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
+</head>
 
-	</head>
-	<body>
-		<div class="wrapper">
+<body>
 
-			<header>
+    <div class="reveal">
 
-				<h1>reveal.js</h1>
-				<p>
-					The HTML Presentation Framework &mdash; Site coming soon
-				</p>
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <section data-background="img/introduccion/femto.JPG">
+                <h2>Deseño, fabricación e verificación da placa de potencia do satélite FemtoXat</h2>
+                <p align="right">
+                    <small><strong>Autor</strong><br>Xabier Crespo Álvarez</small>
 
-			</header>
+                    <p align="right">
+                        <small><strong>Titores</strong><br>Jorge Marcos Acevedo<br>Carlos Martínez Peñalver<br>Diego Nodar López</small>
+                    </p>
+                    <hr>
 
-			<footer>
+                    <div class="row-container">
+                        <div class="column_3">
+                            <img src="img/escudo_etset.png">
+                        </div>
+                        <div class="column_3">
+                            <img src="img/logo%20sencillo%20femto.png">
+                            <small>15 de xullo de 2014</small>
 
-				<p>
-					<a href="http://lab.hakim.se/reveal-js">Try the demo</a>
-					<a href="https://github.com/hakimel/reveal.js/releases">Download</a>
-				</p>
+                        </div>
+                        <div class="column_3">
+                            <img src="img/logo_uvigo.png">
+                        </div>
 
-			</footer>
+                    </div>
+            </section>
 
-		</div>
+            <!---------------------------------------------------------------------------------------->
+            <section>
+                <h2>ÍNDICE</h2>
+                <p class="list-item fragment grow active">Introdución
+                </p>
+                <p class="list-item">Sistemas eléctricos de potencia
+                </p>
+                <p class="list-item">Etapa de deseño
+                </p>
+                <p class="list-item">Etapa de fabricación e verificación
+                </p>
+                <p class="list-item">Conclusións e liñas futuras
+                </p>
+            </section>
+            <section>
+                <h3>Humsat: concepto de misión</h3>
+                <img src="img/introduccion/concepto_humsat.png">
+            </section>
 
-		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            <section>
+                <h3>FemtoXat: concepto de misión</h3>
+                <img src="img/introduccion/concepto_femto.png">
+            </section>
 
-		  ga('create', 'UA-43375306-1', 'revealjs.com');
-		  ga('send', 'pageview');
-		</script>
-	</body>
+            <!-----------------------------------EPS------------------------------------------------->
+            <section>
+                <h2>ÍNDICE</h2>
+                <p class="list-item">Introdución
+                </p>
+                <p class="list-item fragment grow active">Sistemas eléctricos de potencia
+                </p>
+                <p class="list-item">Etapa de deseño
+                </p>
+                <p class="list-item">Etapa de fabricación e verificación
+                </p>
+                <p class="list-item">Conclusións e liñas futuras
+                </p>
+            </section>
+
+            <section>
+                <section>
+                    <h3>Etapas dun EPS</h3>
+                    <div class="row-container">
+                        <div class="column_2 fragment grow active">
+                            <big>XERACIÓN DE POTENCIA</big>
+                        </div>
+                        <div class="column_2">
+                            <big>ALMACENAMENTO DE ENERXÍA</big>
+                        </div>
+
+                    </div>
+                    <div class="row-container">
+                        <div class="column_2">
+                            <big>REGULACIÓN E CONTROL DE POTENCIA</big>
+                        </div>
+                        <div class="column_2">
+                            <big>DISTRIBUCIÓN DE POTENCIA</big>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h3>Punto de funcionamento dun panel solar</h3>
+                    <div class="column-container">
+                        <div class="vertical-cell">
+                            <img src="img/eps/solarpanel_power.JPG">
+                        </div>
+                        <div class="vertical-cell">
+                            <img src="img/eps/solarpanel_eff.JPG">
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h3>Etapas dun EPS</h3>
+                    <div class="row-container">
+                        <div class="column_2">
+                            <big>XERACIÓN DE POTENCIA</big>
+                        </div>
+                        <div class="column_2 fragment grow active">
+                            <big>ALMACENAMENTO DE ENERXÍA</big>
+                        </div>
+
+                    </div>
+                    <div class="row-container">
+                        <div class="column_2">
+                            <big>REGULACIÓN E CONTROL DE POTENCIA</big>
+                        </div>
+                        <div class="column_2">
+                            <big>DISTRIBUCIÓN DE POTENCIA</big>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h3>Carga/Descarga dunha batería</h3>
+                    <div class="column-container">
+                        <div class="vertical-cell fragment grow-big">
+                            <img src="img/eps/battery_charge.png">
+                        </div>
+                        <div class="vertical-cell fragment grow-big">
+                            <img src="img/eps/battery_discharge.png ">
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h3>Etapas dun EPS</h3>
+                    <div class="row-container">
+                        <div class="column_2">
+                            <big>XERACIÓN DE POTENCIA</big>
+                        </div>
+                        <div class="column_2">
+                            <big>ALMACENAMENTO DE ENERXÍA</big>
+                        </div>
+
+                    </div>
+                    <div class="row-container">
+                        <div class="column_2 fragment grow active">
+                            <big>REGULACIÓN E CONTROL DE POTENCIA</big>
+                        </div>
+                        <div class="column_2">
+                            <big>DISTRIBUCIÓN DE POTENCIA</big>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h3>Tipos de sistemas de regulación e control de potencia</h3>
+                    <div class="column-container">
+                        <img src="img/eps/eps_config.png">
+                    </div>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h3>Etapas dun EPS</h3>
+                    <div class="row-container">
+                        <div class="column_2">
+                            <big>XERACIÓN DE POTENCIA</big>
+                        </div>
+                        <div class="column_2">
+                            <big>ALMACENAMENTO DE ENERXÍA</big>
+                        </div>
+
+                    </div>
+                    <div class="row-container">
+                        <div class="column_2">
+                            <big>REGULACIÓN E CONTROL DE POTENCIA</big>
+                        </div>
+                        <div class="column_2 fragment grow active">
+                            <big>DISTRIBUCIÓN DE POTENCIA</big>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h3>Clasificación dos sistemas de distribuición</h3>
+                    <div class="column-container">
+                        <div class="vertical-cell">
+                            <img src="img/eps/centralized.png">
+                        </div>
+                        <div class="vertical-cell">
+                            <img src="img/eps/distributed.png">
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+
+            <!------------------------------------DESEÑO---------------------------------------------->
+            <section>
+                <h2>ÍNDICE</h2>
+                <p class="list-item">Introdución
+                </p>
+                <p class="list-item">Sistemas eléctricos de potencia
+                </p>
+                <p class="list-item fragment grow active">Etapa de deseño
+                </p>
+                <p class="list-item">Etapa de fabricación e verificación
+                </p>
+                <p class="list-item">Conclusións e liñas futuras
+                </p>
+            </section>
+
+            <section>
+                <section>
+                    <h3>Etapas dun EPS</h3>
+                    <div class="row-container">
+                        <div class="column_2 fragment grow active">
+                            <big>XERACIÓN DE POTENCIA</big>
+                        </div>
+                        <div class="column_2">
+                            <big>ALMACENAMENTO DE ENERXÍA</big>
+                        </div>
+
+                    </div>
+                    <div class="row-container">
+                        <div class="column_2">
+                            <big>REGULACIÓN E CONTROL DE POTENCIA</big>
+                        </div>
+                        <div class="column_2">
+                            <big>DISTRIBUCIÓN DE POTENCIA</big>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h3>Punto de funcionamento dun panel solar</h3>
+                    <img src="img/femto/azurspace.png">
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h3>Etapas dun EPS</h3>
+                    <div class="row-container">
+                        <div class="column_2">
+                            <big>XERACIÓN DE POTENCIA</big>
+                        </div>
+                        <div class="column_2 fragment grow active">
+                            <big>ALMACENAMENTO DE ENERXÍA</big>
+                        </div>
+
+                    </div>
+                    <div class="row-container">
+                        <div class="column_2">
+                            <big>REGULACIÓN E CONTROL DE POTENCIA</big>
+                        </div>
+                        <div class="column_2">
+                            <big>DISTRIBUCIÓN DE POTENCIA</big>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h3>Carga/Descarga dunha batería</h3>
+                    <div class="column-container">
+                        <div class="vertical-cell fragment grow">
+                            <img src="img/eps/battery_charge.png">
+                        </div>
+                        <div class="vertical-cell">
+                            <img src="img/eps/battery_discharge.png">
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h3>Etapas dun EPS</h3>
+                    <div class="row-container">
+                        <div class="column_2">
+                            <big>XERACIÓN DE POTENCIA</big>
+                        </div>
+                        <div class="column_2">
+                            <big>ALMACENAMENTO DE ENERXÍA</big>
+                        </div>
+
+                    </div>
+                    <div class="row-container">
+                        <div class="column_2 fragment grow active">
+                            <big>REGULACIÓN E CONTROL DE POTENCIA</big>
+                        </div>
+                        <div class="column_2">
+                            <big>DISTRIBUCIÓN DE POTENCIA</big>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h3>Regulador de carga da batería (BCR)</h3>
+                    <div class="row-container-transparent">
+                        <div class="column_2_transparent">
+                            <p><big>SPV1040</big>
+                                <br>
+                                <img src="img/femto/spv1040.png" width="70%">
+                                <br>
+                                <em><small>Convertedor DC-DC</small></em>
+                                <br>
+                                <em><small>Algoritmo PPT</small></em>
+                            </p>
+                        </div>
+                        <div class="column_2_transparent">
+                            <p><big>L6924D</big>
+                                <br>
+                                <img src="img/femto/l6924d.png" width="50%">
+                                <br>
+                                <em><small>Xestión das fases de carga da batería</small></em>
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                <h3>Reguladores de 3V</h3>
+                    <img src="img/femto/"
+                    
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h3>Etapas dun EPS</h3>
+                    <div class="row-container">
+                        <div class="column_2">
+                            <big>XERACIÓN DE POTENCIA</big>
+                        </div>
+                        <div class="column_2">
+                            <big>ALMACENAMENTO DE ENERXÍA</big>
+                        </div>
+
+                    </div>
+                    <div class="row-container">
+                        <div class="column_2">
+                            <big>REGULACIÓN E CONTROL DE POTENCIA</big>
+                        </div>
+                        <div class="column_2 fragment grow active">
+                            <big>DISTRIBUCIÓN DE POTENCIA</big>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h3>Clasificación dos sistemas de distribuición</h3>
+                    <div class="column-container">
+                        <div class="vertical-cell">
+                            <img src="img/eps/centralized.png">
+                        </div>
+                        <div class="vertical-cell">
+                            <img src="img/eps/distributed.png">
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <!---------------------------------------------------------------------------------------->
+            <section data-background="img/introduccion/femto.JPG">
+                <h1>GRACIAS</h1>
+                <h3>POLA ATENCIÓN</h3>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+
+    <script>
+        // Full list of configuration options available here:
+         // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+
+            theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+            transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+            // Parallax scrolling
+            // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+            // parallaxBackgroundSize: '2100px 900px',
+
+            // Optional libraries used to extend on reveal.js
+            dependencies: [
+                {
+                    src: 'lib/js/classList.js',
+                    condition: function () {
+                        return !document.body.classList;
+                    }
+                },
+                {
+                    src: 'plugin/markdown/marked.js',
+                    condition: function () {
+                        return !!document.querySelector('[data-markdown]');
+                    }
+                },
+                {
+                    src: 'plugin/markdown/markdown.js',
+                    condition: function () {
+                        return !!document.querySelector('[data-markdown]');
+                    }
+                },
+                {
+                    src: 'plugin/highlight/highlight.js',
+                    async: true,
+                    callback: function () {
+                        hljs.initHighlightingOnLoad();
+                    }
+                },
+                {
+                    src: 'plugin/zoom-js/zoom.js',
+                    async: true,
+                    condition: function () {
+                        return !!document.body.classList;
+                    }
+                },
+                {
+                    src: 'plugin/notes/notes.js',
+                    async: true,
+                    condition: function () {
+                        return !!document.body.classList;
+                    }
+                }
+    ]
+        });
+    </script>
+
+</body>
+
 </html>
