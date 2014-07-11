@@ -43,6 +43,9 @@ var Reveal = (function(){
 
 			// Enable keyboard shortcuts for navigation
 			keyboard: true,
+			
+            // Enable mouse click to see next slide
+			click: true,
 
 			// Enable the slide overview mode
 			overview: true,
@@ -647,6 +650,10 @@ var Reveal = (function(){
 		if( config.keyboard ) {
 			document.addEventListener( 'keydown', onDocumentKeyDown, false );
 		}
+        
+        if( config.click ) {
+            document.addEventListener( 'mousedown', onDocumentClick, false);
+        }
 
 		if( config.progress && dom.progress ) {
 			dom.progress.addEventListener( 'click', onProgressClicked, false );
@@ -3062,6 +3069,9 @@ var Reveal = (function(){
 
 	}
 
+    function onDocumentClick( event ) {
+        isOverview() ? deactivateOverview() : event.shiftKey ? navigatePrev() : navigateNext();
+    }
 
 	// --------------------------------------------------------------------//
 	// ------------------------ PLAYBACK COMPONENT ------------------------//
