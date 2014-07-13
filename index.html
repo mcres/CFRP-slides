@@ -350,7 +350,7 @@
                             <img onerror="this.src='img/confidencial.jpg'" src="img/femto/EPS-board-confidencial.png" width="70%">
                         </div>
                     </div>
-                    <img onerror="this.src='img/confidencial.jpg'" src="img/femto/bat/bat-comparativa-confidencial.png" height="250px">
+                    <img onerror="this.src='img/confidencial.jpg'" src="img/femto/bat/bat-comparativa-confidencial.png" height="200px">
                 </section>
             </section>
 
@@ -478,6 +478,9 @@
                     <h3>Protección contra sobrecorrente</h3>
                     <img onerror="this.src='img/confidencial.jpg'" src="img/femto/distr/overcurrent-altium.png" width="70%">
                 </section>
+                <aside class="notes">
+                    Cando a corrente en algunha das liñas supera un certo límite actívase un temporizador...
+                </aside>
             </section>
 
             <section>
@@ -562,7 +565,7 @@
                     </p>
                     <p class="list-item">Voltaxe de recarga
                     </p>
-                    <p class="list-item active-item">Eficiencia
+                    <p class="list-item fragment grow active">Eficiencia
                     </p>
                     <p class="list-item">Protección fronte a temperatura
                     </p>
@@ -597,7 +600,7 @@
                         <div class="column_2_transparent">
                             <p>
                                 <img onerror="this.src='img/confidencial.jpg'" src="img/femto/bcr/capacity_ws_formula.png" width="80%">
-                                <br><strong>Eficiencia ~ 53%</strong>
+                                <br><strong>Eficiencia ~ 85%</strong>
                             </p>
                         </div>
                     </div>
@@ -752,8 +755,13 @@
     <script src="js/reveal.js"></script>
     <script>
         Reveal.addEventListener('slidechanged', function (event) {
+            //Triggers animation on slide change...
             var elements = event.currentSlide.querySelectorAll('.active-item')
-            if ( elements.length ) elements[0].classList.add('visible');
+            if (elements.length) elements[0].classList.add('visible');
+
+            //...and removes the animation fo the previous slide
+            var elements = event.previousSlide.querySelectorAll('.visible')
+            if (elements.length) elements[0].classList.remove('visible');
         });
     </script>
     <script>
