@@ -101,7 +101,7 @@
                 <h2>ÍNDICE</h2>
                 <p class="list-item">Introdución
                 </p>
-                <p class="list-item fragment grow active">Sistemas eléctricos de potencia
+                <p class="list-item active-item">Sistemas eléctricos de potencia
                 </p>
                 <p class="list-item">Etapa de deseño
                 </p>
@@ -109,6 +109,9 @@
                 </p>
                 <p class="list-item">Conclusións e liñas futuras
                 </p>
+                <aside class="notes">
+                    Entrando xa en materia...
+                </aside>
             </section>
 
             <section>
@@ -161,7 +164,7 @@
                         <div class="column_2">
                             <big>XERACIÓN DE POTENCIA</big>
                         </div>
-                        <div class="column_2 fragment grow active">
+                        <div class="column_2 active-item">
                             <big>ALMACENAMENTO DE ENERXÍA</big>
                         </div>
 
@@ -206,7 +209,7 @@
 
                     </div>
                     <div class="row-container">
-                        <div class="column_2 fragment grow active">
+                        <div class="column_2 active-item">
                             <big>REGULACIÓN E CONTROL DE POTENCIA</big>
                         </div>
                         <div class="column_2">
@@ -243,7 +246,7 @@
                         <div class="column_2">
                             <big>REGULACIÓN E CONTROL DE POTENCIA</big>
                         </div>
-                        <div class="column_2 fragment grow active">
+                        <div class="column_2 active-item">
                             <big>DISTRIBUCIÓN DE POTENCIA</big>
                         </div>
                     </div>
@@ -266,7 +269,7 @@
                 </p>
                 <p class="list-item">Sistemas eléctricos de potencia
                 </p>
-                <p class="list-item fragment grow active">Etapa de deseño
+                <p class="list-item active-item">Etapa de deseño
                 </p>
                 <p class="list-item">Etapas de fabricación e verificación
                 </p>
@@ -278,7 +281,7 @@
                 <section>
                     <h3>Etapas dun EPS</h3>
                     <div class="row-container">
-                        <div class="column_2 fragment grow active">
+                        <div class="column_2 active-item">
                             <big>XERACIÓN DE POTENCIA</big>
                         </div>
                         <div class="column_2">
@@ -318,7 +321,7 @@
                         <div class="column_2">
                             <big>XERACIÓN DE POTENCIA</big>
                         </div>
-                        <div class="column_2 fragment grow active">
+                        <div class="column_2 active-item">
                             <big>ALMACENAMENTO DE ENERXÍA</big>
                         </div>
 
@@ -364,7 +367,7 @@
 
                     </div>
                     <div class="row-container">
-                        <div class="column_2 fragment grow active">
+                        <div class="column_2 active-item">
                             <big>REGULACIÓN E CONTROL DE POTENCIA</big>
                         </div>
                         <div class="column_2">
@@ -453,7 +456,7 @@
                         <div class="column_2">
                             <big>REGULACIÓN E CONTROL DE POTENCIA</big>
                         </div>
-                        <div class="column_2 fragment grow active">
+                        <div class="column_2 active-item">
                             <big>DISTRIBUCIÓN DE POTENCIA</big>
                         </div>
                     </div>
@@ -498,7 +501,7 @@
                         </div>
                     </div>
                     <div class="row-container">
-                        <div class="column_2 fragment grow active">
+                        <div class="column_2 active-item">
                             <big>TELEMETRÍA</big>
                         </div>
                     </div>
@@ -527,7 +530,7 @@
                 </p>
                 <p class="list-item">Etapa de deseño
                 </p>
-                <p class="list-item fragment grow active">Etapas de fabricación e verificación
+                <p class="list-item active-item">Etapas de fabricación e verificación
                 </p>
                 <p class="list-item">Conclusións e liñas futuras
                 </p>
@@ -559,7 +562,7 @@
                     </p>
                     <p class="list-item">Voltaxe de recarga
                     </p>
-                    <p class="list-item fragment grow active">Eficiencia
+                    <p class="list-item active-item">Eficiencia
                     </p>
                     <p class="list-item">Protección fronte a temperatura
                     </p>
@@ -592,7 +595,10 @@
                             <img onerror="this.src='img/confidencial.jpg'" src="img/femto/bcr/capacity_ws.png">
                         </div>
                         <div class="column_2_transparent">
-                            <img onerror="this.src='img/confidencial.jpg'" src="img/femto/bcr/capacity_ws_formula.png" width="80%">
+                            <p>
+                                <img onerror="this.src='img/confidencial.jpg'" src="img/femto/bcr/capacity_ws_formula.png" width="80%">
+                                <br><strong>Eficiencia ~ 53%</strong>
+                            </p>
                         </div>
                     </div>
                 </section>
@@ -697,7 +703,7 @@
                     </p>
                     <p class="list-item">Etapas de fabricación e verificación
                     </p>
-                    <p class="list-item fragment grow active">Conclusións e liñas futuras
+                    <p class="list-item active-item">Conclusións e liñas futuras
                     </p>
                 </section>
                 <section>
@@ -708,9 +714,11 @@
                     </p>
                     <p class="list-item-level2">Almacenamento de enerxía
                     </p>
-                    <p class="list-item">Eficiencia do BCR e BVLC
+                    <p class="list-item">Problemas atopados
                     </p>
-                    <p class="list-item">Funcionamento BVLC
+                    <p class="list-item-level2">Eficiencia do BCR
+                    </p>
+                    <p class="list-item-level2">Funcionamento BVLC
                     </p>
                     <p class="list-item">Traballo en equipo
                     </p>
@@ -742,7 +750,12 @@
 
     <script src="lib/js/head.min.js"></script>
     <script src="js/reveal.js"></script>
-
+    <script>
+        Reveal.addEventListener('slidechanged', function (event) {
+            var elements = event.currentSlide.querySelectorAll('.active-item')
+            if ( elements.length ) elements[0].classList.add('visible');
+        });
+    </script>
     <script>
         // Full list of configuration options available here:
          // https://github.com/hakimel/reveal.js#configuration
