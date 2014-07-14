@@ -5,5 +5,3 @@ Based on [reveal.js](https://github.com/hakimel/reveal.js) framework.
 ## License
 
 MIT licensed
-
-Copyright (C) 2014 Hakim El Hattab, http://hakim.se
